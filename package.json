@@ -6,7 +6,9 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint"
+    "test:coverage": "vue-cli-service test:unit --coverage --maxWorkers=20% --watchAll=false --logHeapUsage --cache",
+    "lint": "vue-cli-service lint",
+    "lint:check": "vue-cli-service lint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --no-fix --ignore-path .gitignore"
   },
   "dependencies": {
     "core-js": "^3.8.3",
