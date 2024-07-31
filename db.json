@@ -1,0 +1,6 @@
+{
+  "hotel": [
+    { "id": "1", "name": "Hotel Bacana" },
+    { "id": "2", "name": "Hotel Legal" }
+  ]
+}
