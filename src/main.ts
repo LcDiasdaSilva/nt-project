@@ -1,6 +1,7 @@
 import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
+import './assets/style/main.scss'
 
 import AxiosAdapter from "../src/services/http/AxiosAdapter";
 import HotelApi from "../src/services/api/HotelService";

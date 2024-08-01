@@ -1,8 +1,9 @@
-import { AxiosResponse } from "axios";
+import { HotelInterface } from "@/modules/hotel/models/interfaces";
 import type HttpClientInterface from "../http/HttpClientInterface";
+import { AxiosResponse } from "axios";
 
 export interface HotelApiInterface {
-  listAll(): Promise<AxiosResponse>;
+  listAll(): Promise<AxiosResponse<HotelInterface[]>>;
 }
 
 export default class HotelsApi implements HotelApiInterface {
@@ -12,7 +13,6 @@ export default class HotelsApi implements HotelApiInterface {
   ) {}
 
   listAll() {
-    console.log("testando")
     const url = `${this.baseUrl}/hotel`;
     return this.axiosClient.get(url, {});
   }
