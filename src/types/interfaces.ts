@@ -30,3 +30,15 @@ export interface HotelFiltersInterface {
   price?: number;
   ["reviews.note"]?: number;
 }
+
+export interface DailyInterface {
+  start: string;
+  end: string;
+  daily: number;
+}
+
+export interface TravelUpdateInterface {
+  bedrooms: number;
+  travelers: number;
+  active: boolean;
+}

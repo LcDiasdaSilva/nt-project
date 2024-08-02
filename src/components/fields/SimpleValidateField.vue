@@ -35,7 +35,7 @@
     defineEmits,
     defineProps,
   } from "vue";
-   import useVuelidate from '@vuelidate/core'
+  import useVuelidate from "@vuelidate/core";
   import {
     required,
     minLength,
@@ -126,7 +126,11 @@
     }
   });
 
-  const getError = (errors: string | any[]) => {
+  interface ValidationError {
+    $validator: string;
+  }
+
+  const getError = (errors: string | ValidationError[]) => {
     const messages: Record<string, string> = {
       required: `${props.label} é obrigatório`,
       minLength: `${props.label} deve ter no mínimo ${props.minValidator} caracteres`,
@@ -135,6 +139,13 @@
       email: `${props.label} inválido`,
     };
 
-    return errors.length ? messages[errors[0].$validator] : "";
+    if (Array.isArray(errors)) {
+      const validationError = errors[0] as ValidationError;
+      return validationError && validationError.$validator
+        ? messages[validationError.$validator]
+        : "";
+    }
+
+    return "";
   };
 </script>

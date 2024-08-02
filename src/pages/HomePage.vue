@@ -105,7 +105,7 @@
 
 <script setup lang="ts">
   import type { HotelApiInterface } from "@/services/api/HotelService";
-  import type { HotelInterface } from "../types/interfaces";
+  import type { DailyInterface, HotelInterface, TravelUpdateInterface } from "../types/interfaces";
   import SimpleValidateField from "../components/fields/SimpleValidateField.vue";
   import HotelList from "../components/hotel/HotelList.vue";
   import HotelListCard from "../components/hotel/HotelListCard.vue";
@@ -158,13 +158,13 @@
     daily: 0,
   });
 
-  function getDaily(value: any) {
+  function getDaily(value: DailyInterface) {
     dates.start = value.start;
     dates.end = value.end;
     dates.daily = value.daily;
   }
 
-  function travelersControlUpdate(values: any) {
+  function travelersControlUpdate(values: TravelUpdateInterface) {
     filtersData.bedrooms = values.bedrooms;
     filtersData.travelers = values.travelers;
     filtersData.useTravelersControl = values.active;
