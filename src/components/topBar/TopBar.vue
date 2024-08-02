@@ -27,19 +27,22 @@
   }
 </style>
 <template>
-  <nav class="top-bar  shadow-md ">
+  <nav class="top-bar shadow-md">
     <div class="top-bar__content">
       <div class="top-bar__brand">
         <img src="/images/logo.svg" />
       </div>
       <div class="top-bar__menu">
         <ul>
-          <li v-for="item in state.menu" :key="item.description">
+          <RouterLink
+            :to="item.url"
+            v-for="item in state.menu"
+            :key="item.description"
+          >
             {{ item.description }}
-          </li>
+          </RouterLink>
         </ul>
       </div>
-      
     </div>
   </nav>
 </template>
@@ -47,6 +50,9 @@
   import { reactive } from "vue";
 
   const state = reactive({
-    menu: [{ description: "Inicio" }, { description: "Minhas reservas" }],
+    menu: [
+      { description: "Inicio", url: "/" },
+      { description: "Minhas reservas", url: "/minhas-reservas" },
+    ],
   });
 </script>
