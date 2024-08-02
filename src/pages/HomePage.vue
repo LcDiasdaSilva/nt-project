@@ -108,6 +108,7 @@
       <template #body
         ><FormReserve
           :hotel="state.selectedHotelReserve"
+          :dates="dates"
           @submitReserve="submitReserve"
         /> </template
     ></ModalBase>

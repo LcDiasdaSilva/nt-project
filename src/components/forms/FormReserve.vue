@@ -5,12 +5,23 @@
     &__hotel-name {
       font-size: 1.5rem;
     }
+    &__data {
+      padding: 1rem;
+      border: solid 1px #ccc;
+      border-radius: 0.5rem;
+    }
   }
 </style>
 <template>
   <form class="form-reserve" @submit.prevent="submit">
     <div>Reserva em :</div>
-    <div class="form-reserve__hotel-name">{{ props.hotel.name }}</div>
+    <div class="form-reserve__hotel-name ">{{ props.hotel.name }}</div>
+    <div class="form-reserve__data mt-4">
+      <div>De <b>{{ dates.start }} á {{ dates.end }}</b></div>
+      <div><b>{{ dates.daily }}</b> diária (s)</div>
+      <div>Valor por diária: <b>{{ formatCurrency(hotel.price) }}</b></div>
+      <div>Valor Total <b>{{ formatCurrency(hotel.price * dates.daily) }}</b></div>
+    </div>
     <fieldset class="mt-4">
       <div>
         <SimpleValidateField
@@ -47,10 +58,12 @@
   import SimpleValidateField from "../../components/fields/SimpleValidateField.vue";
   import { reactive, defineEmits, defineProps } from "vue";
   import useVuelidate from "@vuelidate/core";
-  import type { HotelInterface } from "@/types/interfaces";
+  import type { HotelInterface, DailyInterface } from "@/types/interfaces";
+  import { formatCurrency } from "../../utils/function";
 
   const props = defineProps<{
     hotel: HotelInterface;
+    dates: DailyInterface;
   }>();
 
   const stateForm = reactive({
