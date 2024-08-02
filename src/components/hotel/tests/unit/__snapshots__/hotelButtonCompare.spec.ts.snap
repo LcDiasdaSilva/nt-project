@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HotelButtonCompare.vue matches snapshot when total hotels to compare is 2 or more 1`] = `
+<div style="text-align: right;"><button disabled="" class="customHotelCompareButton" type="button"><label>Comparar</label>
+    <!--v-if-->
+  </button><small>* Selecione até 3 hotéis para comparar</small></div>
+`;
+
+exports[`HotelButtonCompare.vue matches snapshot when total hotels to compare is less than 2 1`] = `
+<div style="text-align: right;"><button disabled="" class="customHotelCompareButton" type="button"><label>Comparar</label>
+    <!--v-if-->
+  </button><small>* Selecione até 3 hotéis para comparar</small></div>
+`;

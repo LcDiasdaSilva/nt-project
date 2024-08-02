@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HotelListCard.vue matches snapshot 1`] = `
+<div class="hotel-list-card">
+  <div class="hotel-list-card__wrapper-image">
+    <anonymous-stub src="/images/hotel-exemplo.png" lazyplaceholder="false" delay="0" objectcover="true"></anonymous-stub>
+  </div>
+  <div class="hotel-list-card__wrapper-infos">
+    <div class="hotel-list-card__header">
+      <div class="hotel-list-card__title">Hotel Exemplo</div>
+      <div class="hotel-list-card__address">Rua dos Exemplos, 123</div>
+      <div class="hotel-list-card__description">Descrição do hotel de exemplo.</div>
+    </div>
+    <div class="hotel-list-card__content mt-3">
+      <div class="hotel-list-card__content-left">
+        <div>Quartos: 1</div>
+        <div class="text-emerald-600"> Para até 2 pessoas </div>
+        <div class="hotel-list-card__reviews mt-3">4</div>
+        <div class="hotel-list-card__reviews-description">123 avaliações. </div>
+      </div>
+      <div class="hotel-list-card__content-right">
+        <div class="hotel-list-card__value">R$ 300</div>
+        <div class="hotel-list-card__totalValue">
+          <div>Total: R$ 900</div>
+          <div>3 diária (s)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

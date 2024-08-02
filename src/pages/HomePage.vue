@@ -72,8 +72,16 @@
                 />
                 Comparar
               </label>
-              <div></div>
             </div>
+          </template>
+          <template #reserve>
+            <button
+              @click="openModalHotelReserve"
+              type="button"
+              class="customPrimaryButton mt-2"
+            >
+              Reservar
+            </button>
           </template>
         </HotelListCard>
       </template>
@@ -98,14 +106,18 @@
       :iconClose="true"
       @close="closeModal"
     >
-      <template #body>Reserva </template></ModalBase
-    >
+      <template #body><FormReserve @submitReserve="submitReserve" /> </template
+    ></ModalBase>
   </div>
 </template>
 
 <script setup lang="ts">
   import type { HotelApiInterface } from "@/services/api/HotelService";
-  import type { DailyInterface, HotelInterface, TravelUpdateInterface } from "../types/interfaces";
+  import type {
+    DailyInterface,
+    HotelInterface,
+    TravelUpdateInterface,
+  } from "../types/interfaces";
   import SimpleValidateField from "../components/fields/SimpleValidateField.vue";
   import HotelList from "../components/hotel/HotelList.vue";
   import HotelListCard from "../components/hotel/HotelListCard.vue";
@@ -120,6 +132,7 @@
   import { useLayoutStore } from "../store/useLayoutStore";
   import ModalBase from "../components/modal/ModalBase.vue";
   import TableHotelCompare from "@/components/hotel/HotelTableCompare.vue";
+  import FormReserve from "../components/forms/FormReserve.vue";
 
   const hotelCompareStore = useHotelsCompareStore();
   const layoutStore = useLayoutStore();
@@ -199,5 +212,9 @@
 
   function openModalHotelReserve() {
     state.showModalHotelReserve = true;
+  }
+
+  function submitReserve(values: { name: string; email: string }) {
+    console.log("Criar reserva", values);
   }
 </script>

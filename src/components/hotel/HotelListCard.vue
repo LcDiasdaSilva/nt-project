@@ -115,9 +115,7 @@
             <div>Total: {{ props.totalValue }}</div>
             <div>{{ daily }} diária (s)</div>
           </div>
-          <button type="button" class="customPrimaryButton mt-2">
-            Reservar
-          </button>
+          <slot name="reserve"> </slot>
         </div>
       </div>
     </div>

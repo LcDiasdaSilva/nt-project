@@ -3,6 +3,7 @@
 ## Project up
 ```
 docker-compose up --build
+localhost:8080
 ```
 
 ## Project setup
@@ -27,7 +28,7 @@ npm run build
 
 ### Run your unit tests
 ```
-npm run test:unit
+npm run test
 ```
 
 ### Lints and fixes files

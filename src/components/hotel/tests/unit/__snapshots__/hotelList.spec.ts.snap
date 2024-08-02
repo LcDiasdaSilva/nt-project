@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HotelList.vue matches snapshot when hotels list is empty 1`] = `
+<div class="hotel-list">
+  <div class="hotel-list__empty">Nenhum local encontrado</div>
+</div>
+`;
+
+exports[`HotelList.vue matches snapshot when hotels list is not empty 1`] = `
+<div class="hotel-list">
+  <div>
+    <div>
+      <div class="hotel-list__item">
+        <div>Hotel Bacana</div>
+      </div>
+    </div>
+    <div>
+      <div class="hotel-list__item">
+        <div>Hotel Serenidade</div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

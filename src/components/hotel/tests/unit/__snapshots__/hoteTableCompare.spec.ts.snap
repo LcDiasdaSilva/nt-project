@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TableHotelCompare matches the snapshot 1`] = `
+<div class="table-compare">
+  <table class="table-auto table">
+    <thead>
+      <tr></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <div><img src="/images/hotel-a.png" object-cover=""></div>
+        </td>
+        <td>
+          <div><img src="/images/hotel-b.png" object-cover=""></div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="table-compare__title">Hotel A</div>
+        </td>
+        <td>
+          <div class="table-compare__title">Hotel B</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="table-compare__description">
+            <div>Description of Hotel A</div>
+          </div>
+        </td>
+        <td>
+          <div class="table-compare__description">
+            <div>Description of Hotel B</div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div>Street A</div>
+          <div>City A</div>
+        </td>
+        <td>
+          <div>Street B</div>
+          <div>City B</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="table-compare__price"> Diária: R$&nbsp;100,00</div>
+        </td>
+        <td>
+          <div class="table-compare__price"> Diária: R$&nbsp;200,00</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
