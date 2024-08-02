@@ -1,5 +1,10 @@
 # nt
 
+## Project up
+```
+docker-compose up --build
+```
+
 ## Project setup
 ```
 npm install
@@ -7,7 +12,12 @@ npm install
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
+npm run dev
+```
+
+### Up mock server
+```
+npm run server
 ```
 
 ### Compiles and minifies for production
