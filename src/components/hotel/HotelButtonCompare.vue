@@ -11,7 +11,7 @@
         <b class="mx-2">{{ total }}</b> hotéis</label
       >
     </button>
-    <small>* Seleciona 2 ou mais hotel para comparar</small>
+    <small>* Selecione até 3 hotéis para comparar</small>
   </div>
 </template>
 <script setup lang="ts">

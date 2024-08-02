@@ -119,7 +119,7 @@
   import { useHotelsCompareStore } from "../store/useHotelCompareStore";
   import { useLayoutStore } from "../store/useLayoutStore";
   import ModalBase from "../components/modal/ModalBase.vue";
-  import TableHotelCompare from "@/components/hotel/TableHotelCompare.vue";
+  import TableHotelCompare from "@/components/hotel/HotelTableCompare.vue";
 
   const hotelCompareStore = useHotelsCompareStore();
   const layoutStore = useLayoutStore();
