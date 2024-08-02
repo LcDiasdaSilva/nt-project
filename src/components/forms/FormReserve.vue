@@ -27,7 +27,7 @@
     <div>Reserva em :</div>
     <div class="form-reserve__hotel-name">{{ props.hotel.name }}</div>
     <div class="form-reserve__reserve-data mt-4">
-        <small>Informações da reserva:</small>
+      <small>Informações da reserva:</small>
       <div>
         De <b>{{ dates.start }} á {{ dates.end }}</b>
       </div>
@@ -42,7 +42,7 @@
       </div>
     </div>
     <div class="form-reserve__personal-data mt-4">
-        <small>Dados pessoais:</small>
+      <small>Dados pessoais:</small>
       <fieldset class="mt-4">
         <div>
           <SimpleValidateField
@@ -84,7 +84,7 @@
       </fieldset>
     </div>
     <div class="form-reserve__billing-data mt-4">
-        <small>Dados de pagamento:</small>
+      <small>Dados de pagamento:</small>
     </div>
 
     <div class="mt-4">
@@ -94,7 +94,7 @@
 </template>
 <script setup lang="ts">
   import SimpleValidateField from "../../components/fields/SimpleValidateField.vue";
-  import DocValidateField from "../../components/fields/DocValidateField.vue"
+  import DocValidateField from "../../components/fields/DocValidateField.vue";
   import { reactive, defineEmits, defineProps } from "vue";
   import useVuelidate from "@vuelidate/core";
   import type { HotelInterface, DailyInterface } from "@/types/interfaces";
@@ -105,12 +105,10 @@
     dates: DailyInterface;
   }>();
 
- 
-
   const stateForm = reactive({
     name: "",
     email: "",
-    cpf:""
+    cpf: "",
   });
 
   const v$ = useVuelidate();

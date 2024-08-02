@@ -1,6 +1,7 @@
 import { createApp } from "vue";
 import { createPinia } from "pinia";
-import { vMaska } from "maska"
+import { vMaska } from "maska";
+import Notifications from "@kyvg/vue3-notification";
 import App from "./App.vue";
 import router from "./router";
 import "vue-progressive-image/dist/style.css";
@@ -27,5 +28,6 @@ app
   .provide("hotelApi", hotelApi)
   .directive("debounce", vueDebounce({ lock: true }))
   .directive("maska", vMaska)
+  .use(Notifications)
   .component("VueDatePicker", VueDatePicker)
   .mount("#app");

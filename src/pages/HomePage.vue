@@ -109,19 +109,20 @@
         ><FormReserve
           :hotel="state.selectedHotelReserve"
           :dates="dates"
-          @submitReserve="submitReserve"
+          @submit="submitReserve"
         /> </template
     ></ModalBase>
   </div>
 </template>
 
 <script setup lang="ts">
+  import { useNotification } from "@kyvg/vue3-notification";
   import type { HotelApiInterface } from "@/services/api/HotelService";
   import type {
     DailyInterface,
     HotelInterface,
     TravelUpdateInterface,
-    ReservePayload
+    ReservePayload,
   } from "../types/interfaces";
   import SimpleValidateField from "../components/fields/SimpleValidateField.vue";
   import HotelList from "../components/hotel/HotelList.vue";
@@ -141,6 +142,7 @@
 
   const hotelCompareStore = useHotelsCompareStore();
   const layoutStore = useLayoutStore();
+  const { notify } = useNotification();
 
   const hotelApi = inject("hotelApi") as HotelApiInterface;
 
@@ -223,5 +225,11 @@
 
   function submitReserve(values: ReservePayload) {
     console.log("Criar reserva", values);
+    notify({
+      type: "success",
+      title: "Parabéns!",
+      text: " Seu cadastro reserva foi realizada com sucesso.",
+      duration: 8000,
+    });
   }
 </script>
