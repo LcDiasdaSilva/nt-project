@@ -10,6 +10,9 @@
     @apply focus:outline-none focus:ring-1 focus:ring-black focus:border-black;
     @apply sm:text-sm;
   }
+  .error{
+    @apply text-red-400 flex justify-end
+  }
 }
 
 .customInputSearch {
