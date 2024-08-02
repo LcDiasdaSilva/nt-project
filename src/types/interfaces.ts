@@ -42,3 +42,11 @@ export interface TravelUpdateInterface {
   travelers: number;
   active: boolean;
 }
+
+export interface ReservePayload{
+  name:string
+  email:string
+  cpf:string
+  cardNumber?:string
+  cardDateValid?:string
+}

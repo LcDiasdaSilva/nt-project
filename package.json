@@ -12,6 +12,8 @@
     "server": "json-server --watch server/db.json"
   },
   "dependencies": {
+    "@brazilian-utils/brazilian-utils": "^1.0.0-rc.12",
+    "@kyvg/vue3-notification": "^3.2.1",
     "@pinia/testing": "^0.1.4",
     "@types/vuelidate": "^0.7.21",
     "@vuelidate/core": "^2.0.3",
@@ -22,6 +24,7 @@
     "core-js": "^3.8.3",
     "json-server": "^0.17.4",
     "luxon": "^3.4.4",
+    "maska": "^2.1.10",
     "pinia": "^2.2.0",
     "vue": "^3.2.13",
     "vue-debounce": "^5.0.0",

@@ -68,6 +68,19 @@
             fieldClass="customInput"
           />
         </div>
+        <div>
+          <DocValidateField
+            v-model="stateForm.cpf"
+            label="CPF"
+            id="field-cpf"
+            dataTest="field-cpf"
+            type="text"
+            placeholder="CPF"
+            docType="cpf"
+            required
+            fieldClass="customInput"
+          />
+        </div>
       </fieldset>
     </div>
     <div class="form-reserve__billing-data mt-4">
@@ -81,6 +94,7 @@
 </template>
 <script setup lang="ts">
   import SimpleValidateField from "../../components/fields/SimpleValidateField.vue";
+  import DocValidateField from "../../components/fields/DocValidateField.vue"
   import { reactive, defineEmits, defineProps } from "vue";
   import useVuelidate from "@vuelidate/core";
   import type { HotelInterface, DailyInterface } from "@/types/interfaces";
@@ -91,9 +105,12 @@
     dates: DailyInterface;
   }>();
 
+ 
+
   const stateForm = reactive({
     name: "",
     email: "",
+    cpf:""
   });
 
   const v$ = useVuelidate();

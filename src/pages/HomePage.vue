@@ -121,6 +121,7 @@
     DailyInterface,
     HotelInterface,
     TravelUpdateInterface,
+    ReservePayload
   } from "../types/interfaces";
   import SimpleValidateField from "../components/fields/SimpleValidateField.vue";
   import HotelList from "../components/hotel/HotelList.vue";
@@ -220,7 +221,7 @@
     state.showModalHotelReserve = true;
   }
 
-  function submitReserve(values: { name: string; email: string }) {
+  function submitReserve(values: ReservePayload) {
     console.log("Criar reserva", values);
   }
 </script>
