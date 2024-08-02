@@ -15,7 +15,7 @@
   </div>
 </template>
 <script setup lang="ts">
-  import type { HotelInterface } from "../models/interfaces";
+  import type { HotelInterface } from "../../models/interfaces";
   import { defineProps } from "Vue";
 
   const props = defineProps<{

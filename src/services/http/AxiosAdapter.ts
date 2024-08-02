@@ -1,5 +1,5 @@
 import type HttpClientInterface from "./HttpClientInterface";
-import axios, { AxiosInstance, AxiosResponse } from "axios";
+import axios, { AxiosInstance } from "axios";
 
 export default class AxiosAdapter implements HttpClientInterface {
   api: AxiosInstance;
@@ -10,14 +10,10 @@ export default class AxiosAdapter implements HttpClientInterface {
         "Content-Type": "application/json",
       },
     });
-
-    this.api.interceptors.response.use(
-      (response: AxiosResponse) => response.data
-    );
   }
 
-  get(url = "", data = null) {
-    return this.api.get(url, { data });
+  get(url = "", params = null) {
+    return this.api.get(url, { params });
   }
 
   post(url = "", data = {}) {

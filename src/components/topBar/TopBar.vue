@@ -10,11 +10,19 @@
       justify-content: space-between;
       align-items: center;
     }
-    &__brand{
-        img{
-            width: 40px;
-        }
-
+    &__brand {
+      img {
+        width: 40px;
+      }
+    }
+    &__menu {
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        cursor: pointer;
+      }
     }
   }
 </style>
@@ -22,22 +30,26 @@
   <nav class="top-bar">
     <div class="top-bar__content">
       <div class="top-bar__brand">
-        <img src="/images/logo.svg"/>
+        <img src="/images/logo.svg" />
         <span>OTEIS</span>
       </div>
-      <div class="top-bar__nav">
+      <div class="top-bar__menu">
         <ul>
-            <li>
-                Inicio
-            </li>
-        </ul>
-        <ul>
-            <li>
-                Minhas reservas
-            </li>
+          <li v-for="item in state.menu" :key="item.description">
+            {{ item.description }}
+          </li>
         </ul>
       </div>
-      <div class="top-bar__alerts"></div>
+      <div class="top-bar__alerts">
+        Comparar hotéis
+      </div>
     </div>
   </nav>
 </template>
+<script setup lang="ts">
+  import { reactive } from "vue";
+
+  const state = reactive({
+    menu: [{ description: "Inicio" }, { description: "Minhas reservas" }],
+  });
+</script>

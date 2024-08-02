@@ -2,6 +2,7 @@
   .site-content {
     width: 100%;
     max-width: 900px;
+    padding: 1rem;
     margin: 0 auto;
   }
 </style>
