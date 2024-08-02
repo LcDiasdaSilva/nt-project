@@ -78,7 +78,10 @@
 <template>
   <div class="hotel-list-card">
     <div class="hotel-list-card__wrapper-image">
-      <ProgressiveImage object-cover src="https://picsum.photos/id/1080/1980/1080" />
+      <ProgressiveImage
+        object-cover
+        src="https://picsum.photos/id/1080/1980/1080"
+      />
     </div>
     <div class="hotel-list-card__wrapper-infos">
       <div class="hotel-list-card__header">
@@ -102,9 +105,9 @@
 
       <div class="hotel-list-card__content mt-3">
         <div class="hotel-list-card__content-left">
-          <div>Quartos {{ props.bedrooms }}</div>
+          <div>Quartos: {{ props.bedrooms }}</div>
           <div class="text-emerald-600">
-            para até {{ props.travelers }} pessoas
+            Para até {{ props.travelers }} pessoas
           </div>
           <div class="hotel-list-card__reviews mt-3">
             {{ props.reviewNote }}
@@ -118,13 +121,10 @@
             {{ props.value }}
           </div>
           <div class="hotel-list-card__totalValue">
-            Total{{ props.totalValue }}
+            <div>Total: {{ props.totalValue }}</div>
+            <div>{{ daily }} diária (s)</div>
           </div>
-
-          <button
-            type="button"
-            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 mt-4 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-          >
+          <button type="button" class="customPrimaryButton mt-2">
             Reservar
           </button>
         </div>
@@ -133,7 +133,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import { ProgressiveImage } from "vue-progressive-image";
+  import { ProgressiveImage } from "vue-progressive-image";
   import { defineProps } from "vue";
 
   const props = defineProps<{
@@ -146,5 +146,6 @@ import { ProgressiveImage } from "vue-progressive-image";
     travelers: number;
     bedrooms: number;
     totalValue: string;
+    daily: number;
   }>();
 </script>

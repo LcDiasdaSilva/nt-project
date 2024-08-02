@@ -7,7 +7,7 @@
       margin: 0 auto;
       height: 50px;
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: center;
     }
     &__brand {
@@ -27,11 +27,10 @@
   }
 </style>
 <template>
-  <nav class="top-bar">
+  <nav class="top-bar  shadow-md ">
     <div class="top-bar__content">
       <div class="top-bar__brand">
         <img src="/images/logo.svg" />
-        <span>OTEIS</span>
       </div>
       <div class="top-bar__menu">
         <ul>
@@ -40,9 +39,7 @@
           </li>
         </ul>
       </div>
-      <div class="top-bar__alerts">
-        Comparar hotéis
-      </div>
+      
     </div>
   </nav>
 </template>
