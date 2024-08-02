@@ -93,7 +93,11 @@
   import { formatCurrency } from "../utils/function";
   import HotelButtonCompare from "@/components/hotel/HotelButtonCompare.vue";
   import { useHotelsCompareStore } from "../store/useHotelCompareStore";
+  import { useLayoutStore } from "../store/useLayoutStore";
+
+  
   const hotelCompareStore = useHotelsCompareStore();
+  const layoutStore = useLayoutStore();
 
   const hotelApi = inject("hotelApi") as HotelApiInterface;
 
@@ -144,10 +148,13 @@
 
   async function loadHotels() {
     try {
+      layoutStore.changeStateLoading(true)
       const { data } = await hotelApi.listAll(filters.value);
       state.hotels = data;
+      layoutStore.changeStateLoading(false)
     } catch (error) {
       console.error(error);
+      layoutStore.changeStateLoading(false)
     }
   }
 
