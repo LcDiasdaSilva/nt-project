@@ -94,13 +94,7 @@
         <div class="hotel-list-card__description">
           {{ props.description }}
         </div>
-        <div class="mt-2 text-right">
-          <label>
-            <input type="checkbox" />
-            Comparar
-          </label>
-          <div></div>
-        </div>
+        <slot name="checkCompare"></slot>
       </div>
 
       <div class="hotel-list-card__content mt-3">
@@ -137,6 +131,7 @@
   import { defineProps } from "vue";
 
   const props = defineProps<{
+    id?: number;
     name: string;
     address: string;
     description: string;

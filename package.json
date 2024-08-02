@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "test:coverage": "vue-cli-service test:unit --coverage --maxWorkers=20% --watchAll=false --logHeapUsage --cache",
@@ -21,6 +21,7 @@
     "core-js": "^3.8.3",
     "json-server": "^0.17.4",
     "luxon": "^3.4.4",
+    "pinia": "^2.2.0",
     "vue": "^3.2.13",
     "vue-debounce": "^5.0.0",
     "vue-progressive-image": "^4.0.0",

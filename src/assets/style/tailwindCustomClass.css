@@ -34,3 +34,11 @@
   @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black;
 }
 
+.customHotelCompareButton {
+  @apply w-full inline-flex items-center justify-center px-4 py-2;
+  @apply border border-transparent rounded-md;
+  @apply text-sm font-medium  text-white;
+  @apply bg-green-600 hover:bg-green-800 disabled:bg-slate-300 ;
+  @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black;
+}
+
