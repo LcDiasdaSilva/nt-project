@@ -17,6 +17,7 @@ export interface HotelInterface {
   bedrooms: number;
   price: number;
   reviews: ReviewsInterface;
+  image: string;
 }
 
 export interface HotelFiltersInterface {
@@ -29,4 +30,3 @@ export interface HotelFiltersInterface {
   price?: number;
   ["reviews.note"]?: number;
 }
-

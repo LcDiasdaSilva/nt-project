@@ -16,14 +16,16 @@
 </template>
 <script setup lang="ts">
   import { useHotelsCompareStore } from "../../store/useHotelCompareStore";
-  import { computed } from "vue";
+  import { computed, defineEmits } from "vue";
   const hotelCompareStore = useHotelsCompareStore();
+
+  const emit = defineEmits(["submit"]);
 
   const total = computed(() => {
     return hotelCompareStore.getStateHotelsCompare.length;
   });
 
   function submit() {
-    console.log("Comparar");
+    emit("submit");
   }
 </script>

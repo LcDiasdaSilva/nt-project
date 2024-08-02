@@ -37,7 +37,7 @@
             <TravelersControl @submit="travelersControlUpdate" />
           </div>
           <div class="mt-8">
-            <HotelButtonCompare />
+            <HotelButtonCompare @submit="openModalHotelCompare" />
           </div>
         </div>
       </div>
@@ -55,6 +55,8 @@
           :bedrooms="hotel.bedrooms"
           :daily="dates.daily"
           :totalValue="useTotalValue(hotel.price, dates.daily).totalCurrency"
+          :image="hotel.image"
+          @reserve="openModalHotelReserve"
         >
           <template #checkCompare>
             <div class="mt-2 text-right">
@@ -76,6 +78,28 @@
         </HotelListCard>
       </template>
     </HotelList>
+    <ModalBase
+      ref="ModalHotelCompar"
+      customMaxWidth="1000px"
+      :show="state.showModalHotelCompare"
+      :outClickHide="true"
+      :iconClose="true"
+      @close="closeModal"
+    >
+      <template #body>
+        <TableHotelCompare :hotels="state.selectedHotelsCompare" />
+      </template>
+    </ModalBase>
+    <ModalBase
+      ref="ModalHotelReserve"
+      customMaxWidth="600px"
+      :show="state.showModalHotelReserve"
+      :outClickHide="true"
+      :iconClose="true"
+      @close="closeModal"
+    >
+      <template #body>Reserva </template></ModalBase
+    >
   </div>
 </template>
 
@@ -94,8 +118,9 @@
   import HotelButtonCompare from "@/components/hotel/HotelButtonCompare.vue";
   import { useHotelsCompareStore } from "../store/useHotelCompareStore";
   import { useLayoutStore } from "../store/useLayoutStore";
+  import ModalBase from "../components/modal/ModalBase.vue";
+  import TableHotelCompare from "@/components/hotel/TableHotelCompare.vue";
 
-  
   const hotelCompareStore = useHotelsCompareStore();
   const layoutStore = useLayoutStore();
 
@@ -108,6 +133,8 @@
   const state = reactive({
     hotels: [] as HotelInterface[],
     selectedHotelsCompare: [] as HotelInterface[],
+    showModalHotelCompare: false,
+    showModalHotelReserve: false,
   });
 
   watch(
@@ -148,15 +175,29 @@
 
   async function loadHotels() {
     try {
-      layoutStore.changeStateLoading(true)
+      layoutStore.changeStateLoading(true);
       const { data } = await hotelApi.listAll(filters.value);
       state.hotels = data;
-      layoutStore.changeStateLoading(false)
+      layoutStore.changeStateLoading(false);
     } catch (error) {
       console.error(error);
-      layoutStore.changeStateLoading(false)
+      layoutStore.changeStateLoading(false);
     }
   }
 
   loadHotels();
+
+  function closeModal() {
+    (state.showModalHotelCompare = false),
+      (state.showModalHotelReserve = false);
+  }
+
+  function openModalHotelCompare() {
+    console.log("abrir");
+    state.showModalHotelCompare = true;
+  }
+
+  function openModalHotelReserve() {
+    state.showModalHotelReserve = true;
+  }
 </script>

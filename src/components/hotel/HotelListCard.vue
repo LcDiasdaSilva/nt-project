@@ -78,10 +78,7 @@
 <template>
   <div class="hotel-list-card">
     <div class="hotel-list-card__wrapper-image">
-      <ProgressiveImage
-        object-cover
-        src="https://picsum.photos/id/1080/1980/1080"
-      />
+      <ProgressiveImage object-cover :src="`/images/${props.image}.png`" />
     </div>
     <div class="hotel-list-card__wrapper-infos">
       <div class="hotel-list-card__header">
@@ -128,7 +125,9 @@
 </template>
 <script setup lang="ts">
   import { ProgressiveImage } from "vue-progressive-image";
-  import { defineProps } from "vue";
+  import { defineProps, defineEmits } from "vue";
+
+  const emit = defineEmits(["reserve"]);
 
   const props = defineProps<{
     id?: number;
@@ -142,5 +141,6 @@
     bedrooms: number;
     totalValue: string;
     daily: number;
+    image: string;
   }>();
 </script>

@@ -4,6 +4,7 @@
       "id": "1",
       "name": "Hotel Bacana",
       "description": "Este hotel à beira mar possui um spa e fica perto de Praia de Ipanema.",
+      "image":"/hotel1",
       "address": {
         "street": "Avenida Vieira Souto, 200",
         "city": "Rio de Janeiro",
@@ -25,6 +26,7 @@
     {
       "id": "2",
       "name": "Hotel Serenidade",
+      "image":"/hotel2",
       "description": "Situado em uma área tranquila, este hotel oferece uma vista panorâmica para o campo.",
       "address": {
         "street": "Rua das Flores, 34",
@@ -47,6 +49,7 @@
     {
       "id": "3",
       "name": "Pousada do Amanhã",
+      "image":"/hotel3",
       "description": "Pousada charmosa no centro histórico com café da manhã incluído e decoração vintage.",
       "address": {
         "street": "Praça da Matriz, 10",
@@ -69,6 +72,7 @@
     {
       "id": "4",
       "name": "Hotel Vista Verde",
+      "image":"/hotel4",
       "description": "Localizado em uma colina, oferece vistas deslumbrantes da cidade e uma piscina de borda infinita.",
       "address": {
         "street": "Rua Verde, 45",
@@ -91,6 +95,7 @@
     {
       "id": "5",
       "name": "Refúgio das Águas",
+      "image":"/hotel6",
       "description": "Refúgio tranquilo perto de cachoeiras e trilhas para caminhadas, ideal para quem busca contato com a natureza.",
       "address": {
         "street": "Estrada das Cachoeiras, 777",
@@ -113,6 +118,7 @@
     {
       "id": "6",
       "name": "Palácio do Sol",
+      "image":"/hotel2",
       "description": "Luxuoso hotel no centro de Brasília, com um restaurante gourmet e spa completo.",
       "address": {
         "street": "Quadra 5, Bloco A, 200",
@@ -135,6 +141,7 @@
     {
       "id": "7",
       "name": "Hotel Mar Azul",
+      "image":"/hotel4",
       "description": "Hotel encantador com acesso direto à praia e excelente infraestrutura para famílias.",
       "address": {
         "street": "Avenida Atlântica, 500",
@@ -157,6 +164,7 @@
     {
       "id": "8",
       "name": "Hotel Jardim Secreto",
+      "image":"/hotel4",
       "description": "Charmoso hotel em meio a jardins exuberantes com spa e restaurante orgânico.",
       "address": {
         "street": "Rua do Jardim, 123",
@@ -179,6 +187,7 @@
     {
       "id": "9",
       "name": "Hotel Sol Nascente",
+      "image":"/hotel3",
       "description": "Oferece uma vista incrível para o nascer do sol e acomodações confortáveis e modernas.",
       "address": {
         "street": "Rua do Sol, 89",
@@ -201,6 +210,7 @@
     {
       "id": "10",
       "name": "Hotel Monte Verde",
+      "image":"/hotel2",
       "description": "Elegante hotel em um cenário montanhoso, ideal para casais e escapadas românticas.",
       "address": {
         "street": "Avenida das Montanhas, 200",
@@ -223,6 +233,7 @@
     {
       "id": "11",
       "name": "Hotel Luxor",
+      "image":"/hotel1",
       "description": "Hotel sofisticado no coração de São Paulo, com spa, piscina e restaurante internacional.",
       "address": {
         "street": "Rua da Consolação, 1000",
@@ -245,6 +256,7 @@
     {
       "id": "12",
       "name": "Pousada do Vale",
+      "image":"/hotel2",
       "description": "Pousada acolhedora com vista para o vale, ideal para relaxar e desfrutar da natureza.",
       "address": {
         "street": "Estrada do Vale, 67",
@@ -267,6 +279,7 @@
     {
       "id": "13",
       "name": "Hotel do Rio",
+      "image":"/hotel1",
       "description": "Localizado à beira do Rio de Janeiro, oferece excelente infraestrutura e ótimos serviços.",
       "address": {
         "street": "Avenida Atlântica, 800",
@@ -289,6 +302,7 @@
     {
       "id": "14",
       "name": "Hotel Central Park",
+      "image":"/hotel1",
       "description": "Elegante hotel com localização central e acesso fácil às principais atrações turísticas.",
       "address": {
         "street": "Rua Central, 50",
@@ -311,6 +325,7 @@
     {
       "id": "15",
       "name": "Hotel Paraíso",
+      "image":"/hotel1",
       "description": "Hotel tranquilo com jardins tropicais e piscina aquecida, perfeito para relaxar.",
       "address": {
         "street": "Avenida das Palmeiras, 123",
@@ -333,6 +348,7 @@
     {
       "id": "16",
       "name": "Hotel Casa Grande",
+      "image":"/hotel1",
       "description": "Hotel histórico com arquitetura colonial e ambiente sofisticado.",
       "address": {
         "street": "Praça do Comércio, 20",
@@ -355,6 +371,7 @@
     {
       "id": "17",
       "name": "Pousada da Serra",
+      "image":"/hotel1",
       "description": "Pousada rústica em meio à serra, ideal para quem busca um refúgio na natureza.",
       "address": {
         "street": "Estrada da Serra, 45",
@@ -377,6 +394,7 @@
     {
       "id": "18",
       "name": "Hotel Cidade Luz",
+      "image":"/hotel1",
       "description": "Hotel moderno no centro de Fortaleza, com excelente serviço e localização.",
       "address": {
         "street": "Avenida Beira-Mar, 1500",
@@ -399,6 +417,7 @@
     {
       "id": "19",
       "name": "Hotel Refúgio Urbano",
+      "image":"/hotel1",
       "description": "Hotel sofisticado no centro de Belo Horizonte, com design moderno e serviços exclusivos.",
       "address": {
         "street": "Rua da Bahia, 1000",
@@ -421,6 +440,7 @@
     {
       "id": "20",
       "name": "Pousada do Lago",
+      "image":"/hotel1",
       "description": "Encantadora pousada com vista para o lago e acesso a atividades ao ar livre.",
       "address": {
         "street": "Rua do Lago, 89",
@@ -443,6 +463,7 @@
     {
       "id": "21",
       "name": "Hotel Solaris",
+      "image":"/hotel1",
       "description": "Hotel contemporâneo com design inovador e comodidades de alta qualidade.",
       "address": {
         "street": "Rua dos Pássaros, 30",
@@ -465,6 +486,7 @@
     {
       "id": "22",
       "name": "Hotel Paraíso Tropical",
+      "image":"/hotel1",
       "description": "Localizado na costa tropical, com acesso direto à praia e atividades recreativas.",
       "address": {
         "street": "Avenida das Ondas, 450",
@@ -487,6 +509,7 @@
     {
       "id": "23",
       "name": "Pousada da Praia",
+      "image":"/hotel1",
       "description": "Pousada aconchegante na beira da praia, com café da manhã e vista para o mar.",
       "address": {
         "street": "Avenida Beira-Mar, 200",
@@ -509,6 +532,7 @@
     {
       "id": "24",
       "name": "Hotel Vista Mar",
+      "image":"/hotel1",
       "description": "Moderno hotel com vista panorâmica para o mar e acesso fácil ao centro da cidade.",
       "address": {
         "street": "Rua do Mar, 150",
@@ -531,6 +555,7 @@
     {
       "id": "25",
       "name": "Hotel Jardim das Flores",
+      "image":"/hotel1",
       "description": "Encantador hotel rodeado por jardins floridos e áreas de lazer ao ar livre.",
       "address": {
         "street": "Rua das Flores, 200",
@@ -553,6 +578,7 @@
     {
       "id": "26",
       "name": "Pousada do Sol",
+      "image":"/hotel1",
       "description": "Pousada acolhedora com decoração rústica e ambiente relaxante.",
       "address": {
         "street": "Rua do Sol, 300",
@@ -575,6 +601,7 @@
     {
       "id": "27",
       "name": "Hotel Majestic",
+      "image":"/hotel2",
       "description": "Hotel de luxo com vistas deslumbrantes e comodidades exclusivas.",
       "address": {
         "street": "Rua do Palácio, 500",
@@ -597,6 +624,7 @@
     {
       "id": "28",
       "name": "Hotel Vila do Mar",
+      "image":"/hotel1",
       "description": "Localizado à beira-mar, este hotel oferece atividades recreativas e restaurante especializado.",
       "address": {
         "street": "Rua da Praia, 100",
@@ -619,6 +647,7 @@
     {
       "id": "29",
       "name": "Hotel Terraços",
+      "image":"/hotel4",
       "description": "Moderno hotel com terraços ao ar livre e uma vista incrível da cidade.",
       "address": {
         "street": "Rua dos Terraços, 20",
@@ -641,6 +670,7 @@
     {
       "id": "30",
       "name": "Pousada dos Ventos",
+      "image":"/hotel6",
       "description": "Pousada charmosa com vistas para o campo e ótimo café da manhã.",
       "address": {
         "street": "Estrada dos Ventos, 30",
