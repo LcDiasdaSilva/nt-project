@@ -56,7 +56,6 @@
           :daily="dates.daily"
           :totalValue="useTotalValue(hotel.price, dates.daily).totalCurrency"
           :image="hotel.image"
-          @reserve="openModalHotelReserve"
         >
           <template #checkCompare>
             <div class="mt-2 text-right">
@@ -76,7 +75,7 @@
           </template>
           <template #reserve>
             <button
-              @click="openModalHotelReserve"
+              @click="openModalHotelReserve(hotel)"
               type="button"
               class="customPrimaryButton mt-2"
             >
@@ -106,7 +105,11 @@
       :iconClose="true"
       @close="closeModal"
     >
-      <template #body><FormReserve @submitReserve="submitReserve" /> </template
+      <template #body
+        ><FormReserve
+          :hotel="state.selectedHotelReserve"
+          @submitReserve="submitReserve"
+        /> </template
     ></ModalBase>
   </div>
 </template>
@@ -146,6 +149,7 @@
   const state = reactive({
     hotels: [] as HotelInterface[],
     selectedHotelsCompare: [] as HotelInterface[],
+    selectedHotelReserve: {} as HotelInterface,
     showModalHotelCompare: false,
     showModalHotelReserve: false,
   });
@@ -210,7 +214,8 @@
     state.showModalHotelCompare = true;
   }
 
-  function openModalHotelReserve() {
+  function openModalHotelReserve(hotel: HotelInterface) {
+    state.selectedHotelReserve = hotel;
     state.showModalHotelReserve = true;
   }
 
